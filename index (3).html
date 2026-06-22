@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FSL da NTT Data</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Inter:wght@300;400;500&family=Epilogue:wght@700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #F5F3DC;
+      --navy:  #1A1F3C;
+      --text:  #222;
+      --muted: #666;
+      --white: #fff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding: 10px 0 8px;
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.07);
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--text);
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .hero-title {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      font-family: 'Epilogue', sans-serif;
+      font-size: clamp(2.2rem, 7vw, 5rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+      padding: 20px 24px;
+      text-align: center;
+      width: 100%;
+    }
+
+    /* ── SECTION HEADING ── */
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.6rem;
+      text-align: center;
+      color: var(--text);
+      padding: 28px 0 18px;
+    }
+
+    /* ── FOTO ── */
+    .carousel-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.45s ease;
+    }
+
+    .carousel-track img {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,0.75);
+      border: none; border-radius: 50%;
+      width: 36px; height: 36px;
+      cursor: pointer; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--navy);
+    }
+
+    .carousel-btn:hover { background: var(--white); }
+    .carousel-btn.prev { left: 14px; }
+    .carousel-btn.next { right: 14px; }
+
+    .carousel-dots {
+      display: flex; justify-content: center;
+      gap: 6px; padding: 10px 0 4px;
+    }
+
+    .dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: #bbb; border: none; cursor: pointer; padding: 0;
+    }
+
+    .dot.active { background: var(--navy); }
+
+    /* ── NOI ── */
+    #noi {
+      padding-bottom: 24px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px 12px;
+      padding: 0 24px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .team-member {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      background: var(--white);
+      border: 1.5px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+    }
+
+    .avatar svg { width: 34px; height: 34px; }
+
+    .member-name {
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    /* ── ATTIVITÀ ── */
+    #attivita {
+      padding-bottom: 48px;
+    }
+
+    .activity-list {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding: 0 16px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .activity-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .activity-item.img-left {
+      grid-template-columns: auto 1fr;
+    }
+
+    .activity-item.img-left .act-img { order: -1; }
+
+    .act-text {
+      font-size: 0.75rem;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .act-img {
+      width: 88px;
+      height: 66px;
+      object-fit: cover;
+      border-radius: 3px;
+      flex-shrink: 0;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#foto">foto</a>
+    <a href="#noi">noi</a>
+    <a href="#attivita">attività</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80" alt="NTT Data building" />
+    <h1 class="hero-title">FSL da NTT Data</h1>
+  </div>
+
+  <!-- FOTO -->
+  <section id="foto">
+    <h2 class="section-title">foto</h2>
+
+    <div class="carousel-wrap">
+      <div class="carousel-track" id="carousel">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Open space" />
+        <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?w=600&q=80" alt="Sala relax" />
+        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80" alt="Lounge" />
+        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&q=80" alt="Meeting" />
+      </div>
+      <button class="carousel-btn prev" onclick="slide(-1)">&#8592;</button>
+      <button class="carousel-btn next" onclick="slide(1)">&#8594;</button>
+      <div class="carousel-dots" id="dots"></div>
+    </div>
+  </section>
+
+  <!-- NOI -->
+  <section id="noi">
+    <h2 class="section-title">Noi</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <span class="member-name">nome</span>
+      </div>
+      <div class="team-member">
+        <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <span class="member-name">nome</span>
+      </div>
+      <div class="team-member">
+        <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <span class="member-name">nome</span>
+      </div>
+      <div class="team-member">
+        <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <span class="member-name">nome</span>
+      </div>
+      <div class="team-member">
+        <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <span class="member-name">nome</span>
+      </div>
+      <div class="team-member">
+        <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <span class="member-name">nome</span>
+      </div>
+      <!-- 7th centred -->
+      <div></div>
+      <div class="team-member">
+        <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <span class="member-name">nome</span>
+      </div>
+      <div></div>
+    </div>
+  </section>
+
+  <!-- ATTIVITÀ -->
+  <section id="attivita">
+    <h2 class="section-title">Attività</h2>
+    <div class="activity-list">
+
+      <div class="activity-item">
+        <p class="act-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat mi quis pretium semper. Proin luctus orci ac neque venenatis, kadr commodo dolor posuere. Curabitur dignissim sapien quis cursus egestas.</p>
+        <img class="act-img" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=300&q=80" alt="Attività 1" />
+      </div>
+
+      <div class="activity-item img-left">
+        <img class="act-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" alt="Attività 2" />
+        <p class="act-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui.</p>
+      </div>
+
+      <div class="activity-item">
+        <p class="act-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui.</p>
+        <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Attività 3" />
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    const track = document.getElementById('carousel');
+    const dotsWrap = document.getElementById('dots');
+    if (track && dotsWrap) {
+      const total = track.children.length;
+      let current = 0;
+      for (let i = 0; i < total; i++) {
+        const d = document.createElement('button');
+        d.className = 'dot' + (i === 0 ? ' active' : '');
+        d.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(d);
+      }
+      function goTo(idx) {
+        current = (idx + total) % total;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+      }
+      window.slide = (dir) => goTo(current + dir);
+    }
+  </script>
+
+</body>
+</html>
