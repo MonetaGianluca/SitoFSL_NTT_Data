@@ -10,4 +10,12 @@ Siamo riusciti, con un po' di aiuto da parte dell' Intelligenza Artificiale, a r
 <br>
 Il sito è ancora un work in progress. Per informazioni contattate [Rick](https://github.com/RickyZaghe) su ig: @rickyzaghe
 
-[![Star History Chart](https://api.star-history.com/svg?repos=MonetaGianluca/SitoFSL_NTT_Data&type=Date)](https://star-history.com/#MonetaGianluca/SitoFSL_NTT_Data&Date)
+## Star History
+
+<a href="https://www.star-history.com/?type=date&repos=MonetaGianluca%2FSitoFSL_NTT_Data">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=MonetaGianluca/SitoFSL_NTT_Data&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=MonetaGianluca/SitoFSL_NTT_Data&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=MonetaGianluca/SitoFSL_NTT_Data&type=date&legend=top-left" />
+ </picture>
+</a>
