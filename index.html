@@ -186,14 +186,21 @@
     }
 
     .activity-item {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 16px;
-      align-items: start;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 40px;
     }
-
-    .activity-item.img-left {
-      grid-template-columns: auto 1fr;
+    
+    /* immagini */
+    .act-img {
+      width: 250px;
+      border-radius: 10px;
+    }
+    
+    /* ALTERNANZA */
+    .activity-item:nth-child(even) {
+      flex-direction: row-reverse;
     }
 
     .activity-item.img-left .act-img { order: -1; }
@@ -290,68 +297,92 @@
     <div class="activity-list">
 
       <div class="activity-item">
-  <p class="act-text">
-    Progettazione di una soluzione digitale per la visualizzazione degli attestati di sicurezza,
-    con autenticazione SSO tramite Portale Unica e ottimizzazione dell’area documenti.
-  </p>
-  <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Analisi progetto" />
-</div>
-
-<div class="activity-item">
-  <p class="act-text">
-    Testing e collaudo di una piattaforma digitale per studenti, con analisi dei design
-    e verifica delle funzionalità prima della fase finale.
-  </p>
-  <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Testing" />
-</div>
-
-<div class="activity-item">
-  <p class="act-text">
-    Studio dei sistemi di cybersecurity aziendali, analisi delle principali minacce
-    informatiche e strategie di protezione dei dati.
-  </p>
-  <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Cyber security" />
-</div>
-
-<div class="activity-item">
-  <p class="act-text">
-    Approfondimento del back-end: gestione dei dati lato server,
-    collegamento con database ed elaborazione delle informazioni.
-  </p>
-  <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Back-end" />
-</div>
-
-<div class="activity-item">
-  <p class="act-text">
-    Studio del front-end con JavaScript, TypeScript e React,
-    comprendendo il collegamento tra interfaccia utente e logica applicativa.
-  </p>
-  <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Front-end" />
-</div>
-
-<div class="activity-item">
-  <p class="act-text">
-    Analisi del design UX/UI, dei feedback utenti e dei diversi ruoli:
-    UI designer, UX designer, content designer e business designer.
-  </p>
-  <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Design" />
-</div>
-
-<div class="activity-item">
-  <p class="act-text">
-    Studio della sostenibilità secondo i criteri ESG e strategie come
-    efficienza energetica, energie rinnovabili e green coding.
-  </p>
-  <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Sostenibilità" />
-</div>
-
-<div class="activity-item">
-  <p class="act-text">
-    Utilizzo dei diagrammi di flusso per rappresentare processi e analisi
-    del flusso di accesso agli attestati con verifiche su login e requisiti.
-  </p>
-  <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Diagrammi di flusso" />
-</div>
+        <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Analisi progetto" />
+        <div>
+          <h3>Analisi del progetto</h3>
+          <p class="act-text">
+            Progettazione di una soluzione digitale per la visualizzazione degli attestati di sicurezza,
+            con autenticazione SSO tramite Portale Unica e ottimizzazione dell’area documenti.
+          </p>
+        </div>
+      </div>
+      
+      <div class="activity-item">
+        <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Testing" />
+        <div>
+          <h3>Testing e collaudo</h3>
+          <p class="act-text">
+            Testing e collaudo di una piattaforma digitale per studenti, con analisi dei design
+            e verifica delle funzionalità prima della fase finale.
+          </p>
+        </div>
+      </div>
+      
+      <div class="activity-item">
+        <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Cybersecurity" />
+        <div>
+          <h3>Cyber Security</h3>
+          <p class="act-text">
+            Studio dei sistemi di cybersecurity aziendali, analisi delle principali minacce
+            informatiche e strategie di protezione dei dati.
+          </p>
+        </div>
+      </div>
+      
+      <div class="activity-item">
+        <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Backend" />
+        <div>
+          <h3>Back-End</h3>
+          <p class="act-text">
+            Approfondimento del back-end: gestione dei dati lato server,
+            collegamento con database ed elaborazione delle informazioni.
+          </p>
+        </div>
+      </div>
+      
+      <div class="activity-item">
+        <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Frontend" />
+        <div>
+          <h3>Front-End</h3>
+          <p class="act-text">
+            Studio del front-end con JavaScript, TypeScript e React,
+            comprendendo il collegamento tra interfaccia utente e logica applicativa.
+          </p>
+        </div>
+      </div>
+      
+      <div class="activity-item">
+        <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Design" />
+        <div>
+          <h3>Design (UX/UI)</h3>
+          <p class="act-text">
+            Analisi del design UX/UI, dei feedback utenti e dei diversi ruoli:
+            UI designer, UX designer, content designer e business designer.
+          </p>
+        </div>
+      </div>
+      
+      <div class="activity-item">
+        <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Sostenibilità" />
+        <div>
+          <h3>Sostenibilità</h3>
+          <p class="act-text">
+            Studio della sostenibilità secondo i criteri ESG e strategie come
+            efficienza energetica, energie rinnovabili e green coding.
+          </p>
+        </div>
+      </div>
+      
+      <div class="activity-item">
+        <img class="act-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=300&q=80" alt="Diagrammi" />
+        <div>
+          <h3>Diagrammi di flusso</h3>
+          <p class="act-text">
+            Utilizzo dei diagrammi di flusso per rappresentare processi e analisi
+            del flusso di accesso agli attestati con verifiche su login e requisiti.
+          </p>
+        </div>
+      </div>
 
 
     </div>
