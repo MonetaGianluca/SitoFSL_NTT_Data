@@ -28,8 +28,8 @@
     nav {
       display: flex;
       justify-content: center;
-      gap: 32px;
-      padding: 10px 0 8px;
+      gap: 64px;
+      padding: 20px 0 16px;
       background: var(--white);
       position: sticky;
       top: 0;
@@ -39,7 +39,7 @@
 
     nav a {
       text-decoration: none;
-      font-size: 0.72rem;
+      font-size: 1.4rem;
       font-weight: 400;
       letter-spacing: 0.04em;
       color: var(--text);
@@ -54,7 +54,7 @@
 
     .hero img {
       width: 100%;
-      height: 200px;
+      height: 400px;
       object-fit: cover;
       object-position: center;
       display: block;
@@ -64,12 +64,12 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       font-family: 'Epilogue', sans-serif;
-      font-size: clamp(2.2rem, 7vw, 5rem);
+      font-size: clamp(4rem, 10vw, 8rem);
       font-weight: 900;
       color: var(--white);
       line-height: 1;
       text-shadow: 0 2px 12px rgba(0,0,0,0.35);
-      padding: 20px 24px;
+      padding: 40px 48px;
       text-align: center;
       width: 100%;
     }
@@ -79,10 +79,10 @@
       font-family: 'Playfair Display', serif;
       font-style: italic;
       font-weight: 400;
-      font-size: 1.6rem;
+      font-size: 3.2rem;
       text-align: center;
       color: var(--text);
-      padding: 28px 0 18px;
+      padding: 56px 0 36px;
     }
 
     /* ── FOTO ── */
@@ -99,7 +99,7 @@
     .carousel-track img {
       flex: 0 0 100%;
       width: 100%;
-      height: 320px;
+      height: 640px;
       object-fit: cover;
     }
 
@@ -108,8 +108,8 @@
       top: 50%; transform: translateY(-50%);
       background: rgba(255,255,255,0.75);
       border: none; border-radius: 50%;
-      width: 36px; height: 36px;
-      cursor: pointer; font-size: 1rem;
+      width: 72px; height: 72px;
+      cursor: pointer; font-size: 2rem;
       display: flex; align-items: center; justify-content: center;
       color: var(--navy);
     }
@@ -120,11 +120,11 @@
 
     .carousel-dots {
       display: flex; justify-content: center;
-      gap: 6px; padding: 10px 0 4px;
+      gap: 12px; padding: 20px 0 8px;
     }
 
     .dot {
-      width: 5px; height: 5px; border-radius: 50%;
+      width: 10px; height: 10px; border-radius: 50%;
       background: #bbb; border: none; cursor: pointer; padding: 0;
     }
 
@@ -138,9 +138,9 @@
     .team-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px 12px;
-      padding: 0 48px;
-      max-width: 800px;
+      gap: 40px 24px;
+      padding: 0 96px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
@@ -148,13 +148,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 6px;
+      gap: 12px;
     }
 
     .avatar {
-      width: 64px;
-      height: 64px;
-      border-radius: 14px;
+      width: 128px;
+      height: 128px;
+      border-radius: 28px;
       background: var(--white);
       border: 1.5px solid #ddd;
       display: flex;
@@ -163,10 +163,10 @@
       color: #999;
     }
 
-    .avatar svg { width: 34px; height: 34px; }
+    .avatar svg { width: 68px; height: 68px; }
 
     .member-name {
-      font-size: 0.68rem;
+      font-size: 1.3rem;
       color: var(--muted);
       letter-spacing: 0.02em;
     }
@@ -179,16 +179,16 @@
     .activity-list {
       display: flex;
       flex-direction: column;
-      gap: 32px;
-      padding: 0 48px;
-      max-width: 800px;
+      gap: 64px;
+      padding: 0 96px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
     .activity-item {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 48px;
     }
 
     /* alternanza */
@@ -197,23 +197,23 @@
     }
 
     .act-img {
-      width: 200px;
-      height: 140px;
+      width: 400px;
+      height: 280px;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: 12px;
       flex-shrink: 0;
       display: block;
     }
 
     .activity-item h3 {
-      font-size: 0.9rem;
+      font-size: 1.8rem;
       font-weight: 600;
-      margin-bottom: 6px;
+      margin-bottom: 12px;
       color: var(--navy);
     }
 
     .act-text {
-      font-size: 0.75rem;
+      font-size: 1.4rem;
       line-height: 1.7;
       color: var(--text);
     }
