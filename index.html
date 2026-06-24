@@ -139,8 +139,8 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px 12px;
-      padding: 0 24px;
-      max-width: 480px;
+      padding: 0 48px;
+      max-width: 800px;
       margin: 0 auto;
     }
 
@@ -180,44 +180,42 @@
       display: flex;
       flex-direction: column;
       gap: 32px;
-      padding: 0 16px;
-      max-width: 480px;
+      padding: 0 48px;
+      max-width: 800px;
       margin: 0 auto;
     }
 
     .activity-item {
       display: flex;
       align-items: center;
-      gap: 20px;
-      margin-bottom: 40px;
+      gap: 24px;
     }
-    
-    /* immagini */
-    .act-img {
-      width: 250px;
-      border-radius: 10px;
-    }
-    
-    /* ALTERNANZA */
+
+    /* alternanza */
     .activity-item:nth-child(even) {
       flex-direction: row-reverse;
     }
 
-    .activity-item.img-left .act-img { order: -1; }
+    .act-img {
+      width: 200px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+      display: block;
+    }
+
+    .activity-item h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--navy);
+    }
 
     .act-text {
       font-size: 0.75rem;
       line-height: 1.7;
       color: var(--text);
-    }
-
-    .act-img {
-      width: 88px;
-      height: 66px;
-      object-fit: cover;
-      border-radius: 3px;
-      flex-shrink: 0;
-      display: block;
     }
   </style>
 </head>
