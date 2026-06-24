@@ -8,7 +8,7 @@ Siamo riusciti, con un po' di aiuto da parte dell' Intelligenza Artificiale, a r
 
 <br>
 <br>
-Il sito è ancora un work in progress. Per informazioni contattate [Rick](https://github.com/RickyZaghe) su ig: @rickyzaghe
+Il sito è ancora un work in progress. Per maggiori informazioni contattate Rick su Instagram: @rickyzaghe.
 
 ## Star History
 
