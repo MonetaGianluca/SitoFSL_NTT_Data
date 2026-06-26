@@ -125,8 +125,8 @@
       background: rgba(255,255,255,0.75);
       border: none;
       border-radius: 50%;
-      width: 72px;
-      height: 72px;
+      width: 42px;
+      height: 42px;
       cursor: pointer;
       font-size: 2rem;
       display: flex;
@@ -146,6 +146,7 @@
     .carousel-btn.next { right: 14px; }
 
     .carousel-dots {
+      color:#483e5a;
       display: flex;
       justify-content: center;
       gap: 12px;
@@ -433,7 +434,7 @@
 
   <!-- HERO -->
   <div class="hero">
-    <img src="./fotoAzienda.png" alt="NTT Data building">
+    <img src="./fotoAzienda.webp" alt="NTT Data building">
     <h1 class="hero-title fade-in show">FSL da NTT Data</h1>
   </div>
 
@@ -453,13 +454,17 @@
     <h2 class="section-title fade-in">foto</h2>
     <div class="carousel-wrap fade-in">
       <div class="carousel-track" id="carousel">
-        <img src="./foto1.png" alt="Open space" />
-        <img src="./foto2.png" alt="Sala relax" />
-        <img src="./foto3.png" alt="Lounge" />
-        <img src="./foto4.png" alt="Meeting" />
+        <img src="./foto1.webp" alt="Open space" />
+        <img src="./foto2.webp" alt="Sala relax" />
+        <img src="./foto3.webp" alt="Lounge" />
+        <img src="./foto4.webp" alt="Meeting" />
       </div>
-      <button class="carousel-btn prev" onclick="slide(-1)">&#8592;</button>
-      <button class="carousel-btn next" onclick="slide(1)">&#8594;</button>
+      <button class="carousel-btn prev" onclick="slide(-1)"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+ </svg></button>
+      <button class="carousel-btn next" onclick="slide(1)"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+ </svg></button>
       <div class="carousel-dots" id="dots"></div>
     </div>
   </section>
@@ -469,32 +474,32 @@
     <h2 class="section-title fade-in">Noi</h2>
     <div class="team-grid">
       <div class="team-member fade-in">
-        <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <div class="avatar" style="background-color: #ebf7e4;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
         <span class="member-name">Gianluca</span>
       </div>
 
       <div class="team-member fade-in">
-        <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <div class="avatar" style="background-color: #e8f9e9;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
         <span class="member-name">Kevin</span>
       </div>
 
       <div class="team-member fade-in">
-        <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <div class="avatar" style="background-color: #e6faee;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
         <span class="member-name">Giacomo</span>
       </div>
 
       <div class="team-member fade-in">
-        <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <div class="avatar" style="background-color: #e8fbfc;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
         <span class="member-name">Davide</span>
       </div>
 
       <div class="team-member fade-in">
-        <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <div class="avatar" style="background-color: #eefbff;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
         <span class="member-name">Riccardo</span>
       </div>
 
       <div class="team-member fade-in">
-        <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <div class="avatar" style="background-color: #f1fbff;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
         <span class="member-name">Luca</span>
       </div>
 
@@ -502,7 +507,7 @@
       <div></div>
 
       <div class="team-member fade-in">
-        <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <div class="avatar" style="background-color: #fdfbff;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
         <span class="member-name">Simone</span>
       </div>
 
@@ -515,7 +520,7 @@
     <h2 class="section-title fade-in">Attività</h2>
     <div class="activity-list">
       <div class="activity-item fade-in">
-        <img class="act-img" src="./Analisi.jpg" alt="Analisi progetto" />
+        <img class="act-img" src="./Analisi.webp" alt="Analisi progetto" />
         <div>
           <h3>Analisi del progetto</h3>
           <p class="act-text">
@@ -526,7 +531,7 @@
       </div>
 
       <div class="activity-item fade-in">
-        <img class="act-img" src="./foto1.png" alt="Testing" />
+        <img class="act-img" src="./foto1.webp" alt="Testing" />
         <div>
           <h3>Testing e collaudo</h3>
           <p class="act-text">
@@ -537,7 +542,7 @@
       </div>
 
       <div class="activity-item fade-in">
-        <img class="act-img" src="./foto2.png" alt="Cybersecurity" />
+        <img class="act-img" src="./foto2.webp" alt="Cybersecurity" />
         <div>
           <h3>Cyber Security</h3>
           <p class="act-text">
@@ -548,7 +553,7 @@
       </div>
 
       <div class="activity-item fade-in">
-        <img class="act-img" src="./backend.png" alt="Backend" />
+        <img class="act-img" src="./backend.webp" alt="Backend" />
         <div>
           <h3>Back-End</h3>
           <p class="act-text">
@@ -559,7 +564,7 @@
       </div>
 
       <div class="activity-item fade-in">
-        <img class="act-img" src="./foto3.png" alt="Frontend" />
+        <img class="act-img" src="./foto3.webp" alt="Frontend" />
         <div>
           <h3>Front-End</h3>
           <p class="act-text">
@@ -570,7 +575,7 @@
       </div>
 
       <div class="activity-item fade-in">
-        <img class="act-img" src="./design.png" alt="Design" />
+        <img class="act-img" src="./design.webp" alt="Design" />
         <div>
           <h3>Design (UX/UI)</h3>
           <p class="act-text">
@@ -581,7 +586,7 @@
       </div>
 
       <div class="activity-item fade-in">
-        <img class="act-img" src="./sostenibilita.png" alt="Sostenibilità" />
+        <img class="act-img" src="./sostenibilita.webp" alt="Sostenibilità" />
         <div>
           <h3>Sostenibilità</h3>
           <p class="act-text">
@@ -592,7 +597,7 @@
       </div>
 
       <div class="activity-item fade-in">
-        <img class="act-img" src="./DB.jpg" alt="Design" />
+        <img class="act-img" src="./DB.webp" alt="Design" />
         <div>
           <h3>Database e Analisi</h3>
           <p class="act-text">
@@ -614,7 +619,7 @@
       Grazie!<br>-i ragazzi
     </p>
   </section>
-  <img class="grazie-img" src="./fotoGrazie.jpg" alt="Foto di gruppo" />
+  <img class="grazie-img" src="./fotoGrazie.webp" alt="Foto di gruppo" />
 
   <script>
     const track = document.getElementById('carousel');
