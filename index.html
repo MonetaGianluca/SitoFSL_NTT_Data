@@ -396,6 +396,29 @@
       text-align: center;
     }
 
+    /* ── GRAZIE ── */
+    #grazie {
+      padding: 80px 96px 0;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .grazie-text {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 56px;
+    }
+
+    .grazie-img {
+      width: 100%;
+      max-height: 520px;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px 12px 0 0;
+    }
+
   </style>
 </head>
 <body>
@@ -405,6 +428,7 @@
     <a href="#foto">foto</a>
     <a href="#noi">noi</a>
     <a href="#attivita">attività</a>
+    <a href="#grazie">grazie</a>
   </nav>
 
   <!-- HERO -->
@@ -580,6 +604,17 @@
       
     </div>
   </section>
+
+  <!-- GRAZIE -->
+  <section id="grazie">
+    <h2 class="section-title">Grazie</h2>
+    <p class="grazie-text">
+      Ringraziamo Ilaria per la sua disponibilità nel seguirci durante queste due settimane e tutte le persone che si sono impegnate per mostrarci il loro lavoro con passione e interesse.
+      Ringraziamo anche NTT Data per averci dato la possibiltà di fare questa esperienza.<br>
+      Grazie!<br>-i ragazzi
+    </p>
+  </section>
+  <img class="grazie-img" src="./fotoGrazie.jpg" alt="Foto di gruppo" />
 
   <script>
     const track = document.getElementById('carousel');
